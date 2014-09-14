@@ -19,7 +19,7 @@ public class LoginServer {
 			boolean run = true;
 			ServerSocket server = new ServerSocket(PORT);
 			System.out.println("Ready for Clients");
-			while(run){
+			while(run){//saw this shit online, well not exactly but kinda....https://www.youtube.com/watch?v=Uo5DY546rKY
 				Socket sock = server.accept();
 				LoginServerThread login = new LoginServerThread(sock);
 				Thread x = new Thread(login);
